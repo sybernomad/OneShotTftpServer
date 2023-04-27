@@ -10,9 +10,8 @@ To use `OneShotTftpServer`, simply import the class and create a new instance wi
 from oneshot_tftp_server.server import OneShotTftpServer
 
 server = OneShotTftpServer('/tmp/dir')
-server = OneShotTftpServer(args.root)
 try:
-    server.listen(listenip=args.ip, listenport=args.port)
+    server.listen(listenip="0.0.0.0", listenport=69)
 except (tftpy.TftpException, OSError) as err:
     sys.stderr.write("%s\n" % str(err))
     sys.exit(1)
