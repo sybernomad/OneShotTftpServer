@@ -1,0 +1,19 @@
+repos:
+    - repo: local
+      hooks:
+          - id: black
+            name: black
+            language: script
+            entry: .venv/bin/black --config pyproject.toml
+            types: [python]
+          - id: isort
+            name: isort
+            language: script
+            entry: .venv/bin/isort --settings-path pyproject.toml
+            types: [python]
+          - id: flake8
+            name: flake8
+            language: script
+            entry: .venv/bin/flake8
+            types: [python]
+            

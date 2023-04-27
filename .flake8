@@ -1,0 +1,18 @@
+[flake8]
+max-line-length = 120
+max-complexity = 12
+docstring_style = sphinx
+count = True
+warn-symbols = 
+    os.path = Warning! Consider using pathlib instead
+
+# List of error messages to be ignored
+ignore = C400,C401,C402,C901, W503
+
+per-file-ignores =
+    ; path/to/file.py: W503
+
+# Notes on linters ignored
+# C400-C402: Complains about using list(), set(), or dict().
+# C901: Complains about function complexity
+# W503: Line break before binary operator
